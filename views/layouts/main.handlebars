@@ -15,7 +15,7 @@
         <a href="/">Just Tech News</a>
       </h1>
       <nav>
-        {{#if loggedIn}}
+        {{#if loggedIn}} {{! renders buttons in loggedIn}}
         <a href="/dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
@@ -32,7 +32,7 @@
   </div>
   
   {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script> {{!runs logout script once session ends}}
+  <script src="/javascript/logout.js"></script> {{!runs logout script once session ends | closes session on login page}}
   {{/if}}
 </body>
 

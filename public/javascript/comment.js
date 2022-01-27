@@ -1,7 +1,7 @@
-async function commentFormHandler(event) {
+async function commentFormHandler(event) { //function that captures comment submission
   event.preventDefault();
 
-  const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
+  const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim(); //taking comment and inserting it into the textarea
   const post_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];

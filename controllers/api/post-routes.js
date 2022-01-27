@@ -92,7 +92,7 @@ router.post('/', withAuth, (req, res) => {
 
 router.put('/upvote', withAuth, (req, res) => {
   // custom static method created in models/Post.js
-  Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+  Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User }) //checks if session exists first before goin to db | if it does exist the user id is inserted
     .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
       console.log(err);

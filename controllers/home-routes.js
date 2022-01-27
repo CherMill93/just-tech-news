@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
 
-      res.render('homepage', {
+      res.render('homepage', { //renders logged in stuff no matter where you are in page
         posts,
         loggedIn: req.session.loggedIn
       });
@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
 
 // get single post
 router.get('/post/:id', (req, res) => {
-  Post.findOne({
+  Post.findOne({ //query for single-post.handlebars
     where: {
       id: req.params.id
     },

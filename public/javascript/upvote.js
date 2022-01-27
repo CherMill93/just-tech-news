@@ -1,4 +1,4 @@
-async function upvoteClickHandler(event) {
+async function upvoteClickHandler(event) { //a user_id must be provided first for this to run correctly
   event.preventDefault();
 
   const id = window.location.toString().split('/')[
