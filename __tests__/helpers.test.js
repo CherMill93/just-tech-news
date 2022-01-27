@@ -1,7 +1,8 @@
+//install jest with npm i jest -D | add:"test": "jest" to package.json
 const {format_date, format_plural, format_url} = require('../utils/helpers');
 
 test('format_url() returns a simplified url string', () => {
-  const url1 = format_url('http://test.com/page/1');
+  const url1 = format_url('http://test.com/page/1'); //test pages for page
   const url2 = format_url('https://www.coolstuff.com/abcdefg/');
   const url3 = format_url('https://www.google.com?q=hello');
 

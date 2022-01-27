@@ -1,6 +1,6 @@
-<article class="post">
+<article class="post"> {{!helps minimize repeated code across templates | can extract smaller components from a template to reuse in other templates}}
   <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
+    <a href="{{post_url}}" target="_blank">{{title}}</a> {{! links to handlebars for th post}}
     <span>({{format_url post_url}})</span>
   </div>
   <div class="meta">
