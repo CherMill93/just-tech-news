@@ -2,7 +2,7 @@
   {{#each this}} {{! refers to the parent object - comments | each is a helper function, these can format dates, like dates, }}
   <section class="comment">
     <div class="meta">
-      {{user.username}} on {{format_date created_at}}
+      {{user.username}} on {{format_date created_at}} {{! format_date created_at are from Handlebars.js}}
     </div>
     <div class="text">
       {{comment_text}}

@@ -22,7 +22,7 @@ const sess = {
 
 app.use(session(sess));
 
-const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers'); //the helper from Handlebars.js
 
 const hbs = exphbs.create({ helpers });
 

@@ -4,11 +4,11 @@ const { Post, User, Comment, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
-router.get('/', withAuth, (req, res) => {
+router.get('/', withAuth, (req, res) => { //renders the dashboard
   console.log(req.session);
   console.log('======================');
   Post.findAll({
-    where: {
+    where: {//where uses the id used during the session
       user_id: req.session.user_id
     },
     attributes: [
@@ -43,7 +43,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => { //gets edit id, uses withAuth middleware to render the edit-posthandlebars
   Post.findByPk(req.params.id, {
     attributes: [
       'id',

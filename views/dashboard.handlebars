@@ -14,13 +14,13 @@
   </form>
 </section>
 
-{{#if posts.length}}
+{{#if posts.length}} {{! #if tells it to only load if content is available}}
 <section>
   <h2>Your Posts</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
+      {{> post-info post}} {{!post_info is a partial}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
